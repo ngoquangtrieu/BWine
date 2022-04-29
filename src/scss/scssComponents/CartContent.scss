@@ -1,0 +1,253 @@
+@import "../scssIndex/index.scss";
+
+.listCartNull {
+  @include tablet{
+    height: 1200px;
+  }
+  height: 289px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  & h1 {
+    font-size: 40px;
+    color: $BlueColor2;
+  }
+  & a {
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 4px 16px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    background-color: $BrownColor1;
+    color: $WhiteColor1;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px;
+    &:hover {
+      background-color: $BrownColor2;
+      color: $BlackColor1;
+    }
+  }
+}
+
+.topicList {
+  @include tablet{
+    margin: 100px 0;
+  }
+  @include mobile{
+    margin: 50px 0;
+  }
+  display: flex;
+  justify-content: space-around;
+  margin: 80px 40px 20px;
+  &-iteam {
+    color: $BlueColor2;
+    letter-spacing: 1px;
+    &:nth-child(1) {
+      flex: 5;
+      display: flex;
+      justify-content: center;
+    }
+    &:nth-child(2) {
+      flex: 3;
+      display: flex;
+      justify-content: center;
+    }
+    &:nth-child(3) {
+      flex: 5;
+      display: flex;
+      justify-content: center;
+    }
+    &:nth-child(4) {
+      flex: 3;
+      display: flex;
+      justify-content: center;
+    }
+    &:nth-child(5) {
+      flex: 1;
+    }
+  }
+}
+
+.showCart {
+  @include tablet{
+    margin: 100px 40px;
+  }
+  @include mobile{
+    margin: 50px 40px;
+  }
+  margin: 0 40px;
+  list-style: none;
+  & hr {
+    margin-bottom: 40px;
+  }
+  & li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  &-infor {
+    display: flex;
+    flex: 5;
+    justify-content: center;
+    & img {
+      height: 100px;
+      width: 75px;
+      border-radius: 5px;
+      object-position: center center;
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 10px;
+      &-name {
+        text-transform: capitalize;
+        color: $BlackColor1;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      &-color {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  &-price {
+    color: $YellowColor2;
+    min-width: 80px;
+    flex: 3;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  &-amount {
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex: 5;
+    font-weight: 700;
+    & button {
+      border: none;
+      background-color: transparent;
+      font-size: 20px;
+      padding: 4px;
+      margin: 0 12px;
+      cursor: pointer;
+    }
+  }
+  &-total {
+    min-width: 80px;
+    color: $BlueColor2;
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-garbage {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color: transparent;
+    border: none;
+    & i {
+      padding: 6px;
+      color: $WhiteColor1;
+      border-radius: 4px;
+      transition: 0.4s;
+      cursor: pointer;
+      background-color: $RedColor2;
+      &:hover {
+        opacity: 0.6;
+        transition: 0.4s;
+      }
+    }
+  }
+}
+
+.cartPay {
+  margin: 0 40px;
+  &-continueClear {
+    @include tablet{
+      margin-top: 150px;
+    }
+    @include mobile{
+      margin-top: 100px;
+    }
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    & a {
+      padding: 8px 16px;
+      letter-spacing: 1px;
+      border-radius: 5px;
+      border: none;
+      color: $WhiteColor1;
+      background-color: $BrownColor1;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.4s;
+      text-decoration: none;
+      &:hover {
+        background-color: $BrownColor2;
+        color: $BlackColor1;
+        transition: 0.4s;
+      }
+    }
+    & button {
+      padding: 8px 16px;
+      letter-spacing: 1px;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.4s;
+      color: $WhiteColor1;
+      background-color: $BlackColor1;
+      &:hover {
+        transition: 0.4s;
+        opacity: 0.8;
+      }
+    }
+  }
+  &-format {
+    @include tablet{
+      margin: 125px 0;
+    }
+    @include mobile{
+      margin: 75px 0;
+    }
+    float: right;
+    &-form {
+      padding: 20px 40px;
+      border: 1px solid $BlueColor2;
+      margin: 30px 0;
+      border-radius: 5px;
+      & h5,
+      & p,
+      & h4 {
+        display: grid;
+        color: $BlackColor1;
+        grid-template-columns: 200px 1fr;
+        letter-spacing: 1px;
+        & span {
+          color: $BlackColor1;
+        }
+      }
+      & h5,
+      & p{
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      & h4{
+        font-size: 20px;
+        margin-top: 30px;
+      }
+    }
+  }
+}

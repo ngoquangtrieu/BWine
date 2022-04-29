@@ -1,0 +1,63 @@
+@import "../scssIndex/index.scss";
+
+.checkAge {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://winecellar.vn/wp-content/uploads/2022/04/bg_verify.jpeg);
+  background-position: center center;
+  background-size: cover;
+  &-Form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    align-items: center;
+    & img {
+      width: 70%;
+    }
+    & p {
+      font-size: 16px;
+    }
+    & span{
+      font-size: 16px;
+      color: $RedColor2;
+      font-weight: 700;
+      text-align: center;
+    }
+    & h5 {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    &-Button {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      & button {
+        @include button;
+        min-width: 160px;
+        height: 32px;
+        margin-top: 20px;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $WhiteColor1;
+        transition: 0.4s;
+        background-color: $BrownColor1;
+        &:hover {
+          background-color: #ebcdab;
+          transition: 0.4s;
+          color: $BlackColor1;
+        }
+      }
+    }
+    & h6{
+        margin-top: 20px;
+        color: $RedColor1;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+@import "../scssIndex/index.scss";
+
+.gridView{
+    margin-top: 40px;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    & li{
+        @include tablet{
+            width: 30%;
+            margin-right: 3%;
+        }
+        width: 24%;
+        margin-right: 1%;
+        margin-bottom: 20px;
+        height: 30vw;
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+        &:hover img{
+            transition: 0.4s;
+            transform: scale(1.1);
+        }
+        &:hover span{
+            opacity: 1;
+            visibility: visible;
+            transition: 0.4s;
+        }
+        &:hover a{
+            opacity: 1;
+            transition: 0.4s;
+            visibility: visible;
+        }
+        &:hover p{
+            opacity: 1;
+            transition: 0.4s;
+            visibility: visible;
+        }
+        & img{
+            object-position: center center;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            transition: 0.4s;
+        }
+        & span{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.4s;
+            font-size: 18px;
+            text-transform: capitalize;
+            width: 160px;
+            text-align: center;
+            font-weight: 700;
+            color: $BlackColor1;
+            text-shadow: 2px 2px 5px $YellowColor2;
+            opacity: 0;
+            visibility: hidden;
+        }
+        & a{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            color: $WhiteColor1;
+            padding: 4px 6px;
+            border-radius: 50%;
+            background-color: $BlueColor2;
+            transition: 0.4s;
+            opacity: 0;
+            visibility: hidden;
+            &:hover{
+                transition: 0.4s;
+                background-color: $BrownColor1;
+                color: $BlackColor1;
+            }
+        }
+        & p{
+            position: absolute;
+            bottom: 20%;
+            right: 50%;
+            transform: translateX(50%);
+            font-size: 18px;
+            text-shadow: 2px 2px 5px $YellowColor2;
+            font-weight: 700;
+            color: $BlackColor1;
+            transition: 0.4s;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}

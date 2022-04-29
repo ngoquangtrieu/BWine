@@ -1,0 +1,65 @@
+@import "../scssIndex/index.scss";
+
+.aboutContent {
+  @include tablet{
+    flex-direction: column;
+    align-items: center;
+  }
+  @include mobile{
+    flex-direction: column;
+    align-items: center;
+  }
+  margin: 80px 40px;
+  display: flex;
+  justify-content: space-between;
+  &-image {
+    @include tablet{
+      margin-bottom: 60px;
+    }
+    @include mobile{
+      margin-bottom: 60px;
+    }
+      width: 600px;
+      height: 500px;
+      border-radius: 5px;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+  &-text {
+      width: 520px;
+      & h1{
+        @include tablet{
+          padding-bottom: 40px;
+          font-size: 50px;
+        }
+        @include mobile{
+          padding-bottom: 40px;
+          font-size: 50px;
+        }
+        font-size: 40px;
+        color: $BlueColor1;
+        padding-bottom: 20px;
+          letter-spacing: 1px;
+          border-bottom: 2px solid $BrownColor1;
+      }
+      & h5{
+        @include tablet{
+          font-size: 20px;
+          line-height: 30px;
+        }
+        @include mobile{
+          font-size: 20px;
+          line-height: 30px;
+        }
+          font-size: 16px;
+          letter-spacing: 1px;
+          margin-top: 40px;
+          color: $BlueColor2;
+          line-height: 24px;
+      }
+  }
+}

@@ -1,0 +1,59 @@
+@import "../scssIndex/index.scss";
+
+.productsShow{
+    @include mobile{
+        margin:40px 0;
+    }
+    display: flex;
+    margin: 80px 40px 80px 0;
+    flex-direction: column;
+    &-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-icon{
+            width: 60px;
+            display: flex;
+            margin-right: 20px;
+            justify-content: space-between;
+            & i{
+                font-size: 24px;
+                cursor: pointer;
+            }
+        }
+        &-text{
+            margin-right: 20px;
+            min-width: 140px; 
+            font-size: 16px;
+        }
+        &-line{
+            @include tablet{
+                width: 30%;
+            }
+            @include mobile{
+                width: 0;
+            }
+            width: 50%;
+            height: 2px;
+            background-color: $BlueColor1;
+            margin-right: 20px;
+        }
+        &-filter{
+            display: flex;
+            & span{
+                font-size: 16px;
+                margin-right: 20px;
+            }
+            & select{
+                border: none;
+                font-size: 16px;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
+}
+
+.iconActive{
+    color: $BrownColor1;
+}

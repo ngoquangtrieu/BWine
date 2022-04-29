@@ -1,0 +1,117 @@
+@import "../scssIndex/index.scss";
+
+.productsFilter{
+    margin: 80px 40px;
+    &-search{
+        height: 35px;
+        width: 180px;
+        & input{
+            width: 100%;
+            height: 100%;
+            background-color: $BrownColor3;
+            border: none;
+            border-radius: 5px;
+            padding-left: 20px;
+        }
+    }
+    &-listCategory{
+        margin: 20px 0;
+        list-style: none;
+        & h4{
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        & li{
+            cursor: pointer;
+            text-transform: capitalize;
+            & img{
+                width: 20px;
+                object-fit: cover;
+                margin-right: 10px;
+            }
+        }
+        & .activeCategory{
+            color: $BrownColor1;
+        }
+    }
+    &-company{
+        margin-bottom: 20px;
+        & h4{
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        & select{
+            cursor: pointer;
+            & option{
+                text-transform: capitalize;
+                padding-left: 10px;
+            }
+        }
+    }
+    &-listColors{
+        margin-bottom: 20px;
+        & h4{
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        & ul{
+            list-style: none;
+            display: flex;
+            & li{
+                opacity: 0.4;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                margin-right: 10px;
+                cursor: pointer;
+                font-size: 0;
+                &:nth-child(1){
+                    font-size: 16px;
+                    transform: translateY(-4px);
+                }
+            }
+            & .activeColor{
+                opacity: 1;
+            }
+        }
+    }
+    &-price{
+        margin-bottom: 20px;
+        & h4{
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        & p{
+            font-size: 16px;
+            color: $BrownColor1;
+        }
+        & input{
+            cursor: pointer;
+        }
+    }
+    &-ship{
+        margin-bottom: 20px;
+        display: flex;
+        & h4{
+            letter-spacing: 1px;
+            margin-right: 10px;
+        }
+        & input{
+            transform: translateY(4px);
+            width: 16px;
+            height: 16px;
+        }
+    }
+    &-clear{
+        & button{
+            padding: 4px 8px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            background-color: $RedColor1;
+            border: none;
+            border-radius: 5px;
+            color: $WhiteColor1 ;
+            cursor: pointer;
+        }
+    }
+}

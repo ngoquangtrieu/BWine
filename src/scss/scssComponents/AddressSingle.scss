@@ -1,0 +1,28 @@
+@import "../scssIndex/index.scss";
+
+
+.addressSingle {
+  height: 80px;
+  background-color: $BrownColor3;
+  display: flex;
+  align-items: center;
+  & a {
+    text-decoration: none;
+    margin-left: 40px;
+    color: $BrownColor1;
+    font-size: 30px;
+    transition: 0.4s;
+    font-weight: 700;
+    &:hover {
+      color: $BlueColor2;
+      transition: 0.4s;
+    }
+  }
+  & span {
+    margin-left: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: $BlueColor1;
+  }
+}

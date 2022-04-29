@@ -1,0 +1,33 @@
+@import "../scssIndex/index.scss";
+
+.imgMain {
+  @include tablet{
+    margin-bottom: 70px;
+  }
+  width: 550px;
+  height: 500px;
+  & img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+}
+
+.listImg {
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+  & img {
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+.borderImage {
+  border: 4px solid $BrownColor1;
+}

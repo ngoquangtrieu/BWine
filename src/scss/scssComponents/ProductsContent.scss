@@ -1,0 +1,8 @@
+@import "../scssIndex/index.scss";
+
+.productsContent{
+    display: flex;
+    @include mobile{
+        flex-direction: column;
+    }
+}
