@@ -13,16 +13,25 @@
         color: $WhiteColor1;
         font-size: 18px;
         letter-spacing: 1px;
+        @include miniMobile{
+            font-size: 16px;
+        }
     }
     &-Span2{
         color: $BrownColor1;
         font-size: 18px;
         letter-spacing: 1px;
         margin: 0 4px;
+        @include miniMobile{
+            font-size: 16px;
+        }
     }
     &-Span3{
         color: $WhiteColor1;
         font-size: 18px;
         letter-spacing: 1px;
+        @include miniMobile{
+            font-size: 16px;
+        }
     }
 }

@@ -8,12 +8,21 @@
   & li {
     display: flex;
     margin-bottom: 40px;
+    @include miniMobile{
+      flex-direction: column;
+      text-align: center;
+    }
     & img {
       border-radius: 5px;
       width: 150px;
       height: 225px;
       object-position: center center;
       margin-right: 40px;
+      @include miniMobile{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
     & .listViewInfor {
       display: flex;
@@ -39,6 +48,11 @@
         color: $BlueColor2;
       }
       & a {
+        @include miniMobile{
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+        }
         text-decoration: none;
         color: $WhiteColor1;
         padding: 4px 8px;

@@ -15,6 +15,11 @@
     letter-spacing: 1px;
     margin-top: 40px;
     margin-left: 40px;
+    @include miniMobile{
+      font-size: 26px;
+      text-align: center;
+      margin: 0 20px;
+    }
   }
   &-list {
     @include mobile{
@@ -28,6 +33,11 @@
       @include mobile{
         margin: 20px 0 40px 0;
       }
+      @include miniMobile{
+        width: 250px;
+        text-align: center;
+        font-size: 16px;
+      }
       color: $BrownColor2;
       font-size: 20px;
       width: 400px;
@@ -35,6 +45,9 @@
     &-form {
       display: flex;
       & input {
+        @include miniMobile{
+          width: 200px;
+        }
         width: 400px;
         height: 30px;
         background-color: transparent;
@@ -48,6 +61,10 @@
         border-bottom-left-radius: 5px;
       }
       & button {
+        @include miniMobile{
+          width: 50px;
+          font-size: 16px;
+        }
         width: 150px;
         height: 30px;
         border-top-right-radius: 5px;

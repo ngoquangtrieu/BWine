@@ -11,6 +11,11 @@
     color: $YellowColor1;
     letter-spacing: 1px;
     margin-top: 40px;
+    @include miniMobile{
+      margin: 40px 20px;
+      font-size: 26px;
+      text-align: center;
+    }
   }
   & h4 {
     font-size: 20px;
@@ -19,6 +24,13 @@
     letter-spacing: 1px;
     color: $BlueColor2;
     margin-top: 20px;
+    @include mobile{
+      width: 500px;
+    }
+    @include miniMobile{
+      margin: 0 20px;
+      width: 250px;
+    }
   }
   & ul {
     @include mobile{
@@ -43,6 +55,9 @@
         font-size: 20px;
         letter-spacing: 1px;
         margin: 20px 0;
+        @include miniMobile{
+          text-align: center;
+        }
       }
       & p{
           color: $BlueColor2;

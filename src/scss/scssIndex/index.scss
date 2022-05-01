@@ -51,6 +51,12 @@ $GreenColor2:#008000;
   }
 }
 
+@mixin miniMobile {
+  @media screen and (max-width : 420px) {
+    @content;
+  }
+}
+
 
 
 

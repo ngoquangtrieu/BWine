@@ -2,6 +2,9 @@
 
 .singleContent {
   margin: 80px 40px;
+  @include miniMobile{
+    margin: 40px 20px;
+  }
   & a {
     background-color: $BrownColor1;
     color: $WhiteColor1;

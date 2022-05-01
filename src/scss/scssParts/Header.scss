@@ -60,12 +60,16 @@
     }
   }
 }
+
 .bar {
   @include tablet {
     display: block;
   }
   @include mobile{
     display: block;
+  }
+  @include miniMobile{
+    width: 200px;
   }
   transform: translateX(-100%);
   position: absolute;
@@ -101,6 +105,9 @@
     cursor: pointer;
   }
   & .totalItem {
+    @include miniMobile{
+      transform: translateX(-40px);
+    }
     transform: translateX(-80px);
   }
 }

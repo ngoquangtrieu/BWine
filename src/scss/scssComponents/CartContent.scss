@@ -4,12 +4,22 @@
   @include tablet{
     height: 1200px;
   }
+  @include mobile{
+    height: 600px;
+  }
+  @include miniMobile{
+    text-align: center;
+    height: 600px;
+  }
   height: 289px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   & h1 {
+    @include miniMobile{
+      font-size: 26px;
+    }
     font-size: 40px;
     color: $BlueColor2;
   }
@@ -37,6 +47,9 @@
   }
   @include mobile{
     margin: 50px 0;
+  }
+  @include miniMobile{
+    display: none;
   }
   display: flex;
   justify-content: space-around;
@@ -77,9 +90,15 @@
   @include mobile{
     margin: 50px 40px;
   }
+  @include miniMobile{
+    margin: 40px 0;
+  }
   margin: 0 40px;
   list-style: none;
   & hr {
+    @include miniMobile{
+      display: none;
+    }
     margin-bottom: 40px;
   }
   & li {
@@ -110,12 +129,18 @@
         letter-spacing: 1px;
       }
       &-color {
+        @include miniMobile{
+          font-size: 12px;
+        }
         display: flex;
         align-items: center;
       }
     }
   }
   &-price {
+    @include miniMobile{
+      display: none;
+    }
     color: $YellowColor2;
     min-width: 80px;
     flex: 3;
@@ -131,7 +156,14 @@
     font-size: 24px;
     flex: 5;
     font-weight: 700;
+    @include miniMobile{
+      font-size: 16px;
+    }
     & button {
+      @include miniMobile{
+        font-size: 16px;
+        padding: 0;
+      }
       border: none;
       background-color: transparent;
       font-size: 20px;
@@ -141,6 +173,9 @@
     }
   }
   &-total {
+    @include miniMobile{
+      display: none;
+    }
     min-width: 80px;
     color: $BlueColor2;
     flex: 3;
@@ -172,12 +207,19 @@
 
 .cartPay {
   margin: 0 40px;
+  @include miniMobile{
+    margin: 0 20px;
+  }
   &-continueClear {
     @include tablet{
       margin-top: 150px;
     }
     @include mobile{
       margin-top: 100px;
+    }
+    @include miniMobile{
+      flex-direction: column;
+      height: 100px;
     }
     display: flex;
     justify-content: space-between;
@@ -200,6 +242,9 @@
       }
     }
     & button {
+      @include miniMobile{
+        font-size: 12px;
+      }
       padding: 8px 16px;
       letter-spacing: 1px;
       border-radius: 5px;
@@ -222,8 +267,14 @@
     @include mobile{
       margin: 75px 0;
     }
+    @include miniMobile{
+      float: none;
+    }
     float: right;
     &-form {
+      @include miniMobile{
+        padding: 10px 20px;
+      }
       padding: 20px 40px;
       border: 1px solid $BlueColor2;
       margin: 30px 0;
@@ -235,16 +286,25 @@
         color: $BlackColor1;
         grid-template-columns: 200px 1fr;
         letter-spacing: 1px;
+        @include miniMobile{
+          grid-template-columns: 150px 1fr;
+        }
         & span {
           color: $BlackColor1;
         }
       }
       & h5,
       & p{
+        @include miniMobile{
+          font-size: 14px;
+        }
         font-size: 16px;
         margin-bottom: 20px;
       }
       & h4{
+        @include miniMobile{
+          font-size: 16px;
+        }
         font-size: 20px;
         margin-top: 30px;
       }

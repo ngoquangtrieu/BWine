@@ -9,6 +9,9 @@
     flex-direction: column;
     align-items: center;
   }
+  @include miniMobile{
+    margin: 40px 20px;
+  }
   margin: 80px 40px;
   display: flex;
   justify-content: space-between;
@@ -18,6 +21,11 @@
     }
     @include mobile{
       margin-bottom: 60px;
+      width: 100%;
+    }
+    @include miniMobile{
+      width: 100%;
+      height: 50vw;
     }
       width: 600px;
       height: 500px;
@@ -31,6 +39,9 @@
   }
   &-text {
       width: 520px;
+      @include miniMobile{
+        width: 100%;
+      }
       & h1{
         @include tablet{
           padding-bottom: 40px;
@@ -39,6 +50,10 @@
         @include mobile{
           padding-bottom: 40px;
           font-size: 50px;
+        }
+        @include miniMobile{
+          font-size: 26px;
+          text-align: center;
         }
         font-size: 40px;
         color: $BlueColor1;
@@ -54,6 +69,10 @@
         @include mobile{
           font-size: 20px;
           line-height: 30px;
+        }
+        @include miniMobile{
+          font-size: 16px;
+          text-align: center;
         }
           font-size: 16px;
           letter-spacing: 1px;

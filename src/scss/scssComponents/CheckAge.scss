@@ -34,6 +34,9 @@
       font-weight: 700;
     }
     &-Button {
+      @include miniMobile{
+        flex-direction: column;
+      }
       display: flex;
       justify-content: space-around;
       width: 100%;
@@ -56,6 +59,9 @@
       }
     }
     & h6{
+      @include miniMobile{
+        text-align: center;
+      }
         margin-top: 20px;
         color: $RedColor1;
     }

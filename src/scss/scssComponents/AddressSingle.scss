@@ -2,6 +2,9 @@
 
 
 .addressSingle {
+  @include miniMobile{
+    display: none;
+  }
   height: 80px;
   background-color: $BrownColor3;
   display: flex;
